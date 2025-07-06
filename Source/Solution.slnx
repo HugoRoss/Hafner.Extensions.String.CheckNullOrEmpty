@@ -1,0 +1,62 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="NuGet" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Folder Name="/1) Implementation/">
+    <Project Path="Implementation/Implementation.csproj" />
+  </Folder>
+  <Folder Name="/2) Testing/">
+    <Project Path="Testing/ManualTests.Net20/ManualTests.Net20.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net30/ManualTests.Net30.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net35/ManualTests.Net35.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net40/ManualTests.Net40.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net403/ManualTests.Net403.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net45/ManualTests.Net45.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net451/ManualTests.Net451.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net452/ManualTests.Net452.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net46/ManualTests.Net46.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/ManualTests.Net461/ManualTests.Net461.csproj">
+      <BuildType Project="Debug" />
+    </Project>
+    <Project Path="Testing/UnitTests/UnitTests.csproj">
+      <BuildDependency Project="Testing/ManualTests.Net20/ManualTests.Net20.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net30/ManualTests.Net30.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net35/ManualTests.Net35.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net40/ManualTests.Net40.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net403/ManualTests.Net403.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net45/ManualTests.Net45.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net451/ManualTests.Net451.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net452/ManualTests.Net452.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net46/ManualTests.Net46.csproj" />
+      <BuildDependency Project="Testing/ManualTests.Net461/ManualTests.Net461.csproj" />
+      <BuildType Project="Debug" />
+    </Project>
+  </Folder>
+  <Folder Name="/3) Solution Items/">
+    <File Path="../BuildTools/Resources/PackageReadME.md" />
+    <File Path="../LICENSE" />
+    <File Path="../README.md" />
+    <File Path=".editorconfig" />
+    <File Path="Clean.bat" />
+  </Folder>
+</Solution>

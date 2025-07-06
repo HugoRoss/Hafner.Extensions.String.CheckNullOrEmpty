@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Possible target framework monikers (TFMs) include: -->
+    <!-- Core: net5.0, netcoreapp3.1, netcoreapp3.0, netcoreapp2.2, netcoreapp2.1, netcoreapp2.0, netcoreapp1.1, netcoreapp1.0 -->
+    <!-- Standard: netstandard2.1, netstandard2.0, netstandard1.6, netstandard1.5, netstandard1.4, netstandard1.3, netstandard1.2, netstandard1.1, netstandard1.0 -->
+    <!-- Framework: net48, net472, net471, net47, net462, net461, net46, net452, net451, net45, net403, net40, net35, net20, net11 -->
+    <TargetFrameworks>net451</TargetFrameworks>
+    <!-- The according precompiler symbols are: -->
+    <!-- Core: NET5_0, NETCOREAPP, NETCOREAPP3_1, NETCOREAPP3_0, NETCOREAPP2_2, NETCOREAPP2_1, NETCOREAPP2_0, NETCOREAPP1_1, NETCOREAPP1_0 -->
+    <!-- Standard: NETSTANDARD, NETSTANDARD2_1, NETSTANDARD2_0, NETSTANDARD1_6, NETSTANDARD1_5, NETSTANDARD1_4, NETSTANDARD1_3, NETSTANDARD1_2, NETSTANDARD1_1, NETSTANDARD1_0 -->
+    <!-- Framework: NETFRAMEWORK, NET48, NET472, NET471, NET47, NET462, NET461, NET46, NET452, NET451, NET45, NET40, NET35, NET20 -->
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <NoWarn>CA1303;CA1304;CA1707;CA1861;CS1591;IDE0018;IDE0079</NoWarn>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <RootNamespace>Hafner.Tools.ManualTests</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <IsPackable>false</IsPackable>
+    <Copyright>Copyright (C) 2025 by Christoph Hafner</Copyright>
+    <Authors>Christoph Hafner</Authors>
+    <Company>Hafner</Company>
+    <Description>Manual tests for frameworks that are not supported by the unit test framework anymore (.NET 4.5.1).</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Implementation\Implementation.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ManualTests.Net20\ConsoleWriter.cs" Link="ConsoleWriter.cs" />
+    <Compile Include="..\ManualTests.Net20\Program.cs" Link="Program.cs" />
+    <Compile Include="..\ManualTests.Net20\Tests.cs" Link="Tests.cs" />
+  </ItemGroup>
+</Project>

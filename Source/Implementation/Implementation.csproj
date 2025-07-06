@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Possible target framework monikers (TFMs) include: -->
+    <!-- Core: net10.0, net9.0, net8.0, net7.0, net6.0, net5.0, netcoreapp3.1, netcoreapp3.0, netcoreapp2.2, netcoreapp2.1, netcoreapp2.0, netcoreapp1.1, netcoreapp1.0 -->
+    <!-- Standard: netstandard2.1, netstandard2.0, netstandard1.6, netstandard1.5, netstandard1.4, netstandard1.3, netstandard1.2, netstandard1.1, netstandard1.0 -->
+    <!-- Framework: net481, net48, net472, net471, net47, net462, net461, net46, net452, net451, net45, net403, net40, net35, net20, net11 -->
+    <TargetFrameworks>net10.0;net9.0;net8.0;net7.0;net6.0;net5.0;netcoreapp3.1;netcoreapp3.0;netcoreapp2.2;netcoreapp2.1;netcoreapp2.0;netcoreapp1.1;netcoreapp1.0;netstandard2.1;netstandard2.0;netstandard1.6;netstandard1.5;netstandard1.4;netstandard1.3;netstandard1.2;netstandard1.1;netstandard1.0;net481;net48;net472;net471;net47;net462;net461;net46;net452;net451;net45;net403;net40;net35;net30;net20</TargetFrameworks>
+    <!-- The according precompiler symbols are: -->
+    <!-- Core: NET10_0, NET9_0, NET8_0, NET7_0, NET6_0, NET5_0, NETCOREAPP, NETCOREAPP3_1, NETCOREAPP3_0, NETCOREAPP2_2, NETCOREAPP2_1, NETCOREAPP2_0, NETCOREAPP1_1, NETCOREAPP1_0 -->
+    <!-- Standard: NETSTANDARD, NETSTANDARD2_1, NETSTANDARD2_0, NETSTANDARD1_6, NETSTANDARD1_5, NETSTANDARD1_4, NETSTANDARD1_3, NETSTANDARD1_2, NETSTANDARD1_1, NETSTANDARD1_0 -->
+    <!-- Framework: NETFRAMEWORK, NET48, NET472, NET471, NET47, NET462, NET461, NET46, NET452, NET451, NET45, NET40, NET35, NET20 -->
+    <FrameworksTemplate>|net20|net30|net35|net40|net403|net45|net451|net452|net46|net461|net462|net47|net471|net472|net48|net41|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netcoreapp3.0|netcoreapp3.1|net5.0|net6.0|net7.0|net8.0|net9.0|net10.0|netstandard1.0|netstandard1.1|netstandard1.2|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|netstandard2.1|</FrameworksTemplate>
+    <FrameworksLackingGuidAttribute>|netstandard1.0|</FrameworksLackingGuidAttribute>
+    <FrameworksLackingExtensionAttribute>|net20|net30|</FrameworksLackingExtensionAttribute>
+    <FrameworksLackingNullableAttributes1>|net20|net30|net35|net40|net403|net45|net451|net452|net46|net461|net462|net47|net471|net472|net48|net481|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netstandard1.0|netstandard1.1|netstandard1.2|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|</FrameworksLackingNullableAttributes1>
+    <FrameworksLackingCallerInfoAttributes1>|net20|net30|net35|net40|net403|</FrameworksLackingCallerInfoAttributes1>
+    <FrameworksLackingCallerInfoAttributes2>|net20|net30|net35|net40|net403|net45|net451|net452|net46|net461|net462|net47|net471|net472|net48|net481|netcoreapp1.0|netcoreapp1.1|netcoreapp2.0|netcoreapp2.1|netcoreapp2.2|netstandard1.0|netstandard1.1|netstandard1.2|netstandard1.3|netstandard1.4|netstandard1.5|netstandard1.6|netstandard2.0|netstandard2.1|</FrameworksLackingCallerInfoAttributes2>
+    <FrameworksSupportingTrimming>|net6.0|net7.0|net8.0|net9.0|net10.0|</FrameworksSupportingTrimming>
+    <Configurations>Debug;Release;NuGet</Configurations>
+    <ConfigurationsThatPublish>|NuGet|</ConfigurationsThatPublish>
+    <OutputType>Library</OutputType>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+    <CheckNotRecommendedTargetFramework>false</CheckNotRecommendedTargetFramework>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <NoWarn></NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>Christoph Hafner</Authors>
+    <Company>Hafner</Company>
+    <PackageTags>Hafner.Extensions CheckNullOrEmpty IsNullOrEmpty NullCheck EmptyCheck CheckEmpty ThrowIfNullOrEmpty Hafner.Extensions.String.CheckNullOrEmpty Hafner.Extension.String.CheckNullOrEmpty String.NullCheck String.EmptyCheck String.NullOrEmptyCheck ArgumentNullException</PackageTags>
+    <!-- Set <major>.<minor>.<patch>.0 for the package version according to the following logic: -->
+    <!--    1.2.3.0  =>  1.2.4.0  if no interface changes have been performed (patch, bug-fix) -->
+    <!--    1.2.3.0  =>  1.3.0.0  if new interfaces have been added (feature release) -->
+    <!--    1.2.3.0  =>  2.0.0.0  if existing interfaces have been modified (breaking changes) -->
+    <Version>1.0.0.0</Version>
+    <!-- Set to <major>.<minor>.0.0 (or <major>.<minor>.<patch>.0) of the <Version> element -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <!-- Set to <major>.<minor>.<patch>.0 of the <Version> element -->
+    <FileVersion>1.0.0.0</FileVersion>
+    <ProductVersion>1.0.0.0</ProductVersion>
+    <PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+    <RootNamespace>Hafner.Extensions</RootNamespace>
+    <AssemblyName>Hafner.Extensions.String.CheckNullOrEmpty</AssemblyName>
+    <Copyright>Copyright (C) 2025 by Christoph Hafner</Copyright>
+    <PackageIcon>metadata\Icon.png</PackageIcon>
+    <Description>Contains an extension method for `System.String` that checks whether it is null or empty and in case it is, throws an `ArgumentNullException`, otherwise returns the same instance.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(FrameworksSupportingTrimming.Contains('|$(TargetFramework)|'))">
+    <PublishTrimmed>true</PublishTrimmed>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(ConfigurationsThatPublish.Contains('|$(Configuration)|'))">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile>metadata\ReadMe.md</PackageReadmeFile>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="$(FrameworksLackingGuidAttribute.Contains('|$(TargetFramework)|'))">
+    <PackageReference Include="Hafner.Compatibility.GuidAttribute" Version="2.0.5" />
+  </ItemGroup>
+  <ItemGroup Condition="$(FrameworksLackingExtensionAttribute.Contains('|$(TargetFramework)|'))">
+    <PackageReference Include="Hafner.Compatibility.ExtensionAttribute" Version="3.0.3" />
+  </ItemGroup>
+  <ItemGroup Condition="$(FrameworksLackingNullableAttributes1.Contains('|$(TargetFramework)|'))">
+    <PackageReference Include="Hafner.Compatibility.NullableReferenceTypeAttributes.G1" Version="1.0.3" />
+  </ItemGroup>
+  <ItemGroup Condition="$(FrameworksLackingCallerInfoAttributes1.Contains('|$(TargetFramework)|'))">
+    <PackageReference Include="Hafner.Compatibility.CallerInformationAttributes.G1" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="$(FrameworksLackingCallerInfoAttributes2.Contains('|$(TargetFramework)|'))">
+    <PackageReference Include="Hafner.Compatibility.CallerInformationAttributes.G2" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETCore.App">
+      <NoWarn>NU1903;NU1902</NoWarn>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\BuildTools\Resources\PackageReadMe.md" Pack="true" PackagePath="metadata\ReadMe.md" Visible="true" />
+    <None Include="..\..\BuildTools\Resources\PackageIcon.png" Pack="true" PackagePath="metadata\Icon.png" Visible="false" />
+  </ItemGroup>
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="@ECHO OFF&#xD;&#xA;CALL &quot;$(ProjectDir)BuildEvents\PreBuild.bat&quot; &quot;$(ConfigurationName)&quot; &quot;$(TargetFramework)&quot;&#xD;&#xA;" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="@ECHO OFF&#xD;&#xA;CALL &quot;$(ProjectDir)BuildEvents\PostBuild.bat&quot; &quot;$(ConfigurationName)&quot; &quot;$(TargetFramework)&quot;&#xD;&#xA;" />
+  </Target>
+  <Target Name="PostPackaging" AfterTargets="Pack" Condition="'$(Configuration)' == 'NuGet'">
+    <Exec Command="@ECHO OFF&#xD;&#xA;CALL &quot;$(ProjectDir)BuildEvents\PostPackage.bat&quot; &quot;NuGet&quot;&#xD;&#xA;" />
+  </Target>
+</Project>

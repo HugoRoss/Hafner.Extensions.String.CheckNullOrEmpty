@@ -1,6 +1,6 @@
 # Hafner.Extensions.String.CheckNullOrEmpty
 
-This micro repository provides extension method `System.String.CheckNullOrEmpty()`.
+This micro package provides extension method `System.String.CheckNullOrEmpty()`.
 
 ## Description
 
@@ -22,7 +22,7 @@ public class Person(string firstName, string lastName) {
 ## Behavior and Edge Cases:
 
  - If the string is not `null` and not empty, the same instance is returned.
- - If the string is `null` or empty and the parameter name is `null`, an `ArgumentNullException` with a generic message is thrown ("The argument is mandatory and cannot be null or empty!")
+ - If the string is `null` or empty and the parameter name is `null` an `ArgumentNullException` with a generic message is thrown ("The argument is mandatory and cannot be null or empty!")
  - If the string is `null` or empty and the parameter name is recognized as an expression, an `ArgumentNullException` with an according message is thrown ("The result of the expression '\{paramName}' is mandatory and cannot be null or empty!")
  - If the string is `null` or empty and the parameter name is recognized as a parameter name, an `ArgumentNullException` with an according message is thrown ("The argument for parameter '\{paramName}' is mandatory and cannot be null or empty!")
 
